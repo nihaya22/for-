@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kado Ulang Tahun Romantis</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffccdc;
+            font-family: Arial, sans-serif;
+        }
+        .card {
+            width: 300px;
+            height: 400px;
+            position: relative;
+            perspective: 1000px;
+            cursor: pointer;
+        }
+        .card-inner {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform-style: preserve-3d;
+            transition: transform 1s;
+        }
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+        .card-front, .card-back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .card-front {
+            background: pink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .card-back {
+            background: white;
+            transform: rotateY(180deg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+        }
+        .heart {
+            color: red;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-inner">
+            <div class="card-front">Klik Aku 💕</div>
+            <div class="card-back">
+                <p>Selamat Ulang Tahun, Sayangku! 🎂</p>
+                <p><h1>ahmad  dzikrullah❤️</h1></p>
+                <p>Kamu adalah cahaya dalam hidupku. Semoga hari ini penuh kebahagiaan dan cinta! ❤️</p>
+                <div class="heart">💖💖💖</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
