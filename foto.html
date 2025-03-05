@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday My Love</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background: linear-gradient(120deg, #ff758c, #ff7eb3);
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 5%;
+        }
+        h1 {
+            font-size: 2.5em;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .heart {
+            font-size: 4em;
+            animation: heartbeat 1.5s infinite;
+            color: red;
+        }
+        .photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid white;
+            margin-top: 20px;
+        }
+        .btn {
+            background-color: white;
+            color: red;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background-color: red;
+            color: white;
+        }
+        #message {
+            display: none;
+            font-size: 1.5em;
+            margin-top: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+        }
+        canvas {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <audio id="bg-music" src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" loop></audio>
+
+    <div class="container">
+        <h1>Selamat Makin Tua, Sayang! 🎉</h1>
+        <p class="heart">❤</p>
+        
+        <!-- Ganti src dengan foto pacarmu -->
+        <img src="Gambar WhatsApp 2025-02-24 pukul 21.05.54_69310c03.jpg" alt="Foto Kita" class="photo">
+
+        <button class="btn" onclick="showMessage()">Klik untuk Kejutan 🎁</button>
+        
+        <p id="message">selamat makin dewasa sayanggggku <br>
+            maaf ya kalo selama ini aku belum bisa bahgiaa in kamu <br> 
+            tau nggak aku buat ini malam " nggak tidur wkwkwkwk <br>
+            yaiyalah kan kalo tidur ya gak  bisa lah bikin beginian 😁<br>
+            
+            semakin dewasa kamu harus semakin mengerti tentang keadaaan <br>
+            keadaan kamu keadaan ku dan keadaan hubungan kita <br>
+             aku bersyukur banget sayng 🥹 aku bisa ketemu kamu <br>
+
+            <br>
+            banyakk banget keadaaann yang bisa aku menggerti setelah kenal kamu <br>
+            sampai aku bingung bagaimana nunjukin rasa syukur aku ke kammu <br>
+            
+            trimaksih ya sayang sudah sabar sama aku <br>
+            terimaksih ya sayang sudah menggubur ego ku <br>
+            terimakasih ya sayang sudah bertahan dalm hubungan rumit ini <br>
+            terimakaasih sudah hadir di hidupku 💕<br>
+            <br>
+            <br>
+            love you more sayangg <br>
+            <br>
+            AHMAD DZIKRULLAH🩶<br>
+            <br>
+            your scenaly <br>
+            <br>            
+            <br>
+            NIHAYATUL MAULIDIYAH . <br>
+            tertanda ditempat💕</p>
+
+        <!-- Chart Hati -->
+        <canvas id="loveChart" width="300" height="300"></canvas>
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById("message").style.display = "block";
+            document.getElementById("bg-music").play();
+            drawHeartChart();
+        }
+
+        function drawHeartChart() {
+            var ctx = document.getElementById('loveChart').getContext('2d');
+            var data = {
+                datasets: [{
+                    data: [80, 20],
+                    backgroundColor: ['red', 'pink']
+                }],
+                labels: ['Cintaku padamu ❤', 'Sisanya']
+            };
+
+            new Chart(ctx, {
+                type: 'pie',
+                data: data,
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            labels: {
+                                color: "white",
+                                font: {
+                                    size: 16
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
